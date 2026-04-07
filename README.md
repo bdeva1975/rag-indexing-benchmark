@@ -1,4 +1,3 @@
-```markdown
 # 🏆 RAG Indexing Benchmark
 
 > **Compare 6 RAG indexing strategies on your own documents — with a single command.**
@@ -201,4 +200,3 @@ MIT License — free to use, modify, and distribute.
 ---
 
 *If this repo helped you, please consider giving it a ⭐ — it helps others find it.*
-```
