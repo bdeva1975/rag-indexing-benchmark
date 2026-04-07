@@ -1,0 +1,41 @@
+# ─────────────────────────────────────────
+# RAG Indexing Benchmark — Configuration
+# ─────────────────────────────────────────
+
+llm:
+  model: "gpt-4o-mini"          # cost-effective for benchmarking
+  temperature: 0
+  max_tokens: 500
+
+embeddings:
+  model: "text-embedding-3-small"  # cost-effective embedding model
+
+data:
+  input_dir: "data/"               # put your documents here
+  file_types:                      # supported file types
+    - ".pdf"
+    - ".txt"
+
+chroma:
+  persist_dir: "chroma_db/"       # vector DB saved here
+
+chunking:
+  fixed:
+    chunk_size: 1000
+    chunk_overlap: 100
+  parent:
+    parent_chunk_size: 3000
+    child_chunk_size: 500
+  expansion:
+    chunk_size: 500
+
+benchmark:
+  top_k: 3                        # number of chunks retrieved per query
+  questions:                      # your benchmark questions go here
+    - "What are the main topics covered in the document?"
+    - "Summarize the key findings."
+    - "What recommendations are provided?"
+
+output:
+  results_dir: "results/"
+  filename: "benchmark_results.csv"

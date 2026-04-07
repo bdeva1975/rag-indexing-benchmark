@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+env/
+venv/
+*.egg-info/
+
+# Chroma persistent DB
+chroma_db/
+
+# Results (optional - comment out if you want to track results)
+results/*.csv
+
+# Data folder (don't upload user documents)
+data/*
+!data/.gitkeep
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# API keys
+*.env
+.env*
